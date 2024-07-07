@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Moul&display=swap');
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: scroll;
+}
+
+ul,
+ol,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture , hr{
+    padding: 0;
+    margin: 0;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+li, a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* CSS Utility */
+:root {
+  /* Colors */
+  --clr-primary: #9ADB62;
+  --clr-primary-1: #177139;
+  --clr-dark: #383938;
+  --clr-white: #ffffff;
+
+  /* Fonts */
+  --ff-inria:  "Inria Sans", sans-serif;
+  --ff-montserrat-alternates:  "Montserrat Alternates", sans-serif;
+  --ff-moul-regular: "Moul", serif;
+}
+
+
+.text-primary { color: var(--clr-primary); }
+.text-primary-1 { color: var(--clr-primary-1); }
+.text-dark { color: var(--clr-dark); }
+.text-white { color: var(--clr-white); }
+
+
+.bg-primary { background-color: var(--clr-primary); }
+.bg-primary-1 { background-color: var(--clr-primary-1); }
+.bg-dark { background-color: var(--clr-dark); }
+.bg-white { background-color: var(--clr-white); }
+
+.ff-inria { font-family: var(--ff-inria); }
+.ff-montserrat-alternates { font-family: var(--ff-montserat); }
+.ff-moul-regular { font-family: var(--ff-moul-regular); }
