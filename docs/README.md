@@ -19,3 +19,8 @@ A platform to register voters and election officer. Allow voter to cast a vote a
 - List Voters Page
 - Add Election
 - Profile Page
+
+
+https://github.com/t-bello7/mayowa-cooking/blob/main/README.md
+
+https://github.com/Freelance-gig/php-project-archive
