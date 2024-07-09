@@ -104,7 +104,6 @@ li, a {
 
 .btn {
     width: fit-content;
-    padding: 1rem 2rem;
 }
 
 .btn-primary {
@@ -119,13 +118,9 @@ li, a {
 
 .btn-close,
 .btn-menu {
-  margin: 2rem 0 0 2rem;
   cursor: pointer;
 }
 
-.btn-menu {
-    display: none !important;
-}
 .btn-close {
     position: absolute;
     right: 10%;
@@ -135,11 +130,24 @@ li, a {
 /* CSS Main */
 .header {
     padding-block: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3rem;
 }
 
 .nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all 1s ease-in-out;
     flex-direction: column;
+    width: 100%;
     margin-top: 2rem;
+}
+
+.nav.visible {
+    right: 0;
 }
 
 .navbar {
@@ -156,5 +164,33 @@ li, a {
 @media (min-width: 768px) {
     .btn-menu,.btn-close {
         display: none !important;
+    }
+
+    .header {
+        padding-block: 0.5rem;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .nav {
+        position: unset;
+        right: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 0;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .navlinks {
+        flex-direction: row;
+        align-items: center;
     }
 }
