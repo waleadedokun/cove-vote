@@ -54,6 +54,7 @@ select {
 li, a {
     text-decoration: none;
     list-style-type: none;
+    color: #fff;
 }
 
 /* CSS Utility */
@@ -68,6 +69,9 @@ li, a {
   --ff-inria:  "Inria Sans", sans-serif;
   --ff-montserrat-alternates:  "Montserrat Alternates", sans-serif;
   --ff-moul-regular: "Moul", serif;
+
+  /* Spacing */
+  --flow-space: 3rem;
 }
 
 
@@ -83,5 +87,74 @@ li, a {
 .bg-white { background-color: var(--clr-white); }
 
 .ff-inria { font-family: var(--ff-inria); }
-.ff-montserrat-alternates { font-family: var(--ff-montserat); }
+.ff-montserrat-alternates { font-family: var(--ff-montserrat-alternates); }
 .ff-moul-regular { font-family: var(--ff-moul-regular); }
+
+.container > * {
+    max-width: 85%;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.btn {
+    width: fit-content;
+    padding: 1rem 2rem;
+}
+
+.btn-primary {
+    background-color: var(--clr-white);
+    color: var(--clr-primary)
+}
+
+.btn-secondary {
+    background-color: var(--clr-primary-1);
+    color: var(--clr-white)
+}
+
+.btn-close,
+.btn-menu {
+  margin: 2rem 0 0 2rem;
+  cursor: pointer;
+}
+
+.btn-menu {
+    display: none !important;
+}
+.btn-close {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+/* CSS Main */
+.header {
+    padding-block: 2rem;
+}
+
+.nav {
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.navbar {
+    flex-direction: column;
+}
+
+.navlinks {
+    flex-direction: column;
+    margin-block: 2rem;
+    gap: 1rem;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+    .btn-menu,.btn-close {
+        display: none !important;
+    }
+}
