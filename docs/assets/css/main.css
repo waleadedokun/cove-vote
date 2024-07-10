@@ -144,6 +144,7 @@ li, a {
     flex-direction: column;
     width: 100%;
     margin-top: 2rem;
+    z-index: 20;
 }
 
 .nav.visible {
@@ -158,6 +159,39 @@ li, a {
     flex-direction: column;
     margin-block: 2rem;
     gap: 1rem;
+}
+
+.image-section {
+    width: 100%;
+    position: relative;
+}
+.image-slider {
+    height: 30vh;
+}
+.image-slider img {
+    display: none;
+    width: 100vw;
+    height: 60vh;
+    transition: all 1s ease-in-out;
+}
+
+.image-slider img.active {
+    display: inline-block;
+}
+
+.election-search {
+    position: absolute;
+    bottom: 20%;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.election-wrapper {
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
 }
 
 /* Desktop View */
@@ -192,5 +226,9 @@ li, a {
     .navlinks {
         flex-direction: row;
         align-items: center;
+    }
+
+    .election-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
