@@ -24,3 +24,5 @@ A platform to register voters and election officer. Allow voter to cast a vote a
 https://github.com/t-bello7/mayowa-cooking/blob/main/README.md
 
 https://github.com/Freelance-gig/php-project-archive
+
+https://www.figma.com/design/vN2oVbzEI4SDT2NHnEhKRa/Whale?node-id=0-1&t=wpFaG3GLl1jgS3i9-0

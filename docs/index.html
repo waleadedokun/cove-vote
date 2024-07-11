@@ -23,7 +23,13 @@
               <li><a href=""> About Us </a></li>
               <li><a href=""> Contact Us </a></li>
           </ul>
-          <button class="btn btn-secondary"> Sign up / Login </button>
+          <div class="dropdown">
+            <button class="btn btn-secondary flex dropdown-btn" style="gap: 1rem;"> <span>  Sign up / Login  </span> <i class="fa fa-caret-down fa-beat-fade" aria-hidden="true"></i> </button>
+            <ul class="dropdown-content">
+              <li class="dropdown-item w-full"> <a class="w-full" href="./voter-auth.html"> I'm a Voter </a> </li>
+              <li class="dropdown-item w-full"> <a class="w-full" href="./officer-auth.html"> I'm an Election Officer </a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>

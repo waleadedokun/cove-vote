@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('.nav').removeClass('visible')
   })
 
-  
+  // Slider
   $('.navicon.left').click(function(event) {
     var currentImage =  $('.image-slider img.active');
     var prevImage = currentImage.prev();
@@ -24,5 +24,12 @@ $(document).ready(function() {
         currentImage.removeClass('active').css('z-index', -10);
         nextImage.addClass('active').css('z-index',10)
     }
+  })
+
+  // Dropdown
+  $('.dropdown').on("mouseover", function() {
+      $('.dropdown-content').addClass('visible')
+  }).on("mouseout", function() {
+    $('.dropdown-content').removeClass('visible')
   })
 })
