@@ -32,4 +32,20 @@ $(document).ready(function() {
   }).on("mouseout", function() {
     $('.dropdown-content').removeClass('visible')
   })
+
+
+  // Tab Navigation
+  // - On page load
+  $('.form-content').hide()
+  $('.auth-form-tab span:first').addClass("active").show()
+  $('.form-content:first').show()
+
+
+  // - On Tab click
+  $('.auth-form-tab span').on("click", function(){
+    $('.auth-form-tab span').removeClass("active")
+    $(this).addClass("active")
+    var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+    $(activeTab).fadeIn();    return false;
+  })
 })
