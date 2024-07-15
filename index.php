@@ -77,8 +77,8 @@
 
       </section>
     </main>
-  <?php
-    include('./assets/components/footer.php')
-  ?>
+    <?php
+      include('./assets/components/footer.php')
+    ?>
   </body>
 </html>

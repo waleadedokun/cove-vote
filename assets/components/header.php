@@ -5,7 +5,7 @@
       <i class="fa-solid fa-bars btn-menu"></i>
       <nav class="flex bg-dark nav">
         <i class="fa-solid mg-2 fa-xmark btn-close"></i>
-        <a class="ff-montserrat-alternates" href="./index.html">
+        <a class="ff-montserrat-alternates" href="./index.php">
           <span class="text-primary-1"> COVE </span> <span class="text-white"> VOTE</span>
         </a>
         <input placeholder="Search Upcoming Elections "/>
@@ -17,8 +17,8 @@
           <div class="dropdown">
             <button class="btn btn-secondary flex dropdown-btn" style="gap: 1rem;"> <span>  Sign up / Login  </span> <i class="fa fa-caret-down fa-beat-fade" aria-hidden="true"></i> </button>
             <ul class="dropdown-content">
-              <li class="dropdown-item w-full"> <a class="w-full" href="./voter-auth.html"> I'm a Voter </a> </li>
-              <li class="dropdown-item w-full"> <a class="w-full" href="./officer-auth.html"> I'm an Election Officer </a></li>
+              <li class="dropdown-item w-full"> <a class="w-full" href="./voter-auth.php"> I'm a Voter </a> </li>
+              <li class="dropdown-item w-full"> <a class="w-full" href="./officer-auth.php"> I'm an Election Officer </a></li>
             </ul>
           </div>
         </div>
