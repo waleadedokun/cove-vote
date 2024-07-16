@@ -1,3 +1,10 @@
+<?php
+    // session_start();
+    require('./server/config.php');
+    if (isset($_SESSION['loggedIn'])) {
+        header('Location: index.php');
+    };
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <title> Auth Page </title>
+    <title> Officer Authentication Page </title>
   </head>
   <body class="ff-inria">
     <?php
@@ -24,17 +31,25 @@
               <form class="d-grid gap-3">
                   <div class="d-grid gap-1">
                       <label class="form-label"> E-mail </label>
-                      <input  placeholder="Email" type="email" required class="form-control" />
+                      <input id="login-officer-email" placeholder="Email" type="email" required class="form-control" />
                   </div>
                   <div class="d-grid gap-1">
                       <label class="form-label"> Password </label>
-                      <input  placeholder="Enter Password" type="password" required  class="form-control"/>
+                      <input id="login-officer-password" placeholder="Enter Password" type="password" required  class="form-control"/>
                   </div>
-                  <button type="button" class="button rounded shadow-sm"> Log in </button>
+                  <button id="login-btn" type="button" class="button rounded shadow-sm"> Log in </button>
               </form>
           </div>
           <div role="tabpanel"  aria-labelledby="signup-tab" class="tab-pane  fade" id="signup">
               <form class="d-grid gap-3 mb-3">
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> First Name </label>
+                      <input id="signupemailinput" placeholder="Enter First Name" type="email" required  class="form-control"/>
+                  </div>
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> Last Name </label>
+                      <input id="signupemailinput" placeholder="Enter Last Name" type="email" required  class="form-control"/>
+                  </div>
                   <div class="d-grid gap-1">
                       <label for="signupemailinput" class="form-label"> E-mail </label>
                       <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
@@ -47,7 +62,7 @@
                       <label for="signupconpasswordinput" class="form-label"> Confirm Password </label>
                       <input id="signupconpasswordinput" placeholder="Enter Password" type="password" required   class="form-control" />
                   </div>
-                  <button type="button" class="button rounded shadow-sm"> Sign up </button>
+                  <button id="signup-officer-btn" type="button" class="button rounded shadow-sm"> Sign up </button>
 
               </form>
           </div>
@@ -57,5 +72,6 @@
     <?php
       include('./assets/components/footer.php')
     ?>
+    <script src="./assets/js/auth.js"> </script>
   </body>
 </html>

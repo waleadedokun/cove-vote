@@ -25,17 +25,49 @@
               <form class="d-grid gap-3">
                   <div class="d-grid gap-1">
                       <label class="form-label"> E-mail </label>
-                      <input  placeholder="Email" type="email" required class="form-control" />
+                      <input  id="login-email" placeholder="Email" type="email" required class="form-control" />
                   </div>
                   <div class="d-grid gap-1">
-                      <label class="form-label"> Password </label>
-                      <input  placeholder="Enter Password" type="password" required  class="form-control"/>
+                      <label class="form-label"> Password </label >
+                      <input id="login-password" placeholder="Enter Password" type="password" required  class="form-control"/>
                   </div>
                   <button type="button" class="button rounded shadow-sm"> Log in </button>
               </form>
           </div>
-          <div role="tabpanel"  aria-labelledby="signup-tab" class="tab-pane  fade" id="signup">
+          <div role="tabpanel"  aria-labelledby="signup-tab" class="tab-pane  fade" id="signup-voter">
               <form class="d-grid gap-3 mb-3">
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> Where do you live ? </label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="england"> England </option>
+                        <option value="scotland"> Scotland </option>
+                        <option value="wales"> Wales </option>
+                        <option value="ireland"> Northern Ireland </option>
+                        <option value="outside"> Outside Britian </option>
+                      </select>
+                  </div>
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> Nationality </label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="irish"> Irish </option>
+                        <option value="british"> British </option>
+                      </select>
+                  </div>
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> Date of Birth </label>
+
+                      <input id="startDate" class="form-control" type="date" />
+                  </div>
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> First Name </label>
+                      <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
+                  </div>
+                  <div class="d-grid gap-1">
+                      <label for="signupemailinput" class="form-label"> Last Name </label>
+                      <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
+                  </div>
                   <div class="d-grid gap-1">
                       <label for="signupemailinput" class="form-label"> E-mail </label>
                       <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
