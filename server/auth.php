@@ -21,8 +21,6 @@
         if(password_verify($password, $hashed_password)) {
             $_SESSION['loggedIn'] = true;
             $_SESSION['email'] = $email;
-            // $res = $connection->query(query: "SELECT `user_type` from `users` WHERE email='$email'");
-            // $user_type = $res->fetch_assoc()['user_type'];
             $res = $connection->query(query: "SELECT `id` from `users` WHERE email='$email'");
             $id = $res->fetch_assoc()['id'];
             $_SESSION['userType'] = $user_type;
