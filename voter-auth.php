@@ -31,14 +31,14 @@
                       <label class="form-label"> Password </label >
                       <input id="login-password" placeholder="Enter Password" type="password" required  class="form-control"/>
                   </div>
-                  <button type="button" class="button rounded shadow-sm"> Log in </button>
+                  <button id="login-btn" type="button" class="button rounded shadow-sm"> Log in </button>
               </form>
           </div>
-          <div role="tabpanel"  aria-labelledby="signup-tab" class="tab-pane  fade" id="signup-voter">
+          <div role="tabpanel"  aria-labelledby="signup-tab" class="tab-pane  fade" id="signup">
               <form class="d-grid gap-3 mb-3">
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> Where do you live ? </label>
-                      <select class="form-select" aria-label="Default select example">
+                      <label for="vlocation" class="form-label"> Where do you live ? </label>
+                      <select id="vlocation" class="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="england"> England </option>
                         <option value="scotland"> Scotland </option>
@@ -48,39 +48,39 @@
                       </select>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> Nationality </label>
-                      <select class="form-select" aria-label="Default select example">
+                      <label for="vnationality" class="form-label"> Nationality </label>
+                      <select id="vnationality" class="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="irish"> Irish </option>
                         <option value="british"> British </option>
                       </select>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> Date of Birth </label>
+                      <label for="vdob" class="form-label"> Date of Birth </label>
 
-                      <input id="startDate" class="form-control" type="date" />
+                      <input id="vdob" class="form-control" type="date" />
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> First Name </label>
-                      <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
+                      <label for="vfirstname" class="form-label"> First Name </label>
+                      <input id="vfirstname" placeholder="Enter First Name" type="text" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> Last Name </label>
-                      <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
+                      <label for="vlastname" class="form-label"> Last Name </label>
+                      <input id="vlastname" placeholder="Enter Last Name" type="text" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> E-mail </label>
-                      <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
+                      <label for="vemail" class="form-label"> E-mail </label>
+                      <input id="vemail" placeholder="name@example.com" type="email" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signuppasswordinput" class="form-label"> Password </label>
-                      <input id="signuppasswordinput" placeholder="Enter Password" type="password" required  class="form-control"/>
+                      <label for="vpassword" class="form-label"> Password </label>
+                      <input id="vpassword" placeholder="Enter Password" type="password" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupconpasswordinput" class="form-label"> Confirm Password </label>
-                      <input id="signupconpasswordinput" placeholder="Enter Password" type="password" required   class="form-control" />
+                      <label for="vconpassword" class="form-label"> Confirm Password </label>
+                      <input id="vconpassword" placeholder="Enter Password" type="password" required   class="form-control" />
                   </div>
-                  <button type="button" class="button rounded shadow-sm"> Sign up </button>
+                  <button id="signup-voter-btn" type="button" class="button rounded shadow-sm"> Sign up </button>
 
               </form>
           </div>
@@ -90,5 +90,7 @@
     <?php
       include('./assets/components/footer.php')
     ?>
+    <script src="./assets/js/auth.js"> </script>
+
     </body>
   </html>

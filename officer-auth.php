@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
     require('./server/config.php');
     if (isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
@@ -31,11 +31,11 @@
               <form class="d-grid gap-3">
                   <div class="d-grid gap-1">
                       <label class="form-label"> E-mail </label>
-                      <input id="login-officer-email" placeholder="Email" type="email" required class="form-control" />
+                      <input id="login-email" placeholder="Email" type="email" required class="form-control" />
                   </div>
                   <div class="d-grid gap-1">
                       <label class="form-label"> Password </label>
-                      <input id="login-officer-password" placeholder="Enter Password" type="password" required  class="form-control"/>
+                      <input id="login-password" placeholder="Enter Password" type="password" required  class="form-control"/>
                   </div>
                   <button id="login-btn" type="button" class="button rounded shadow-sm"> Log in </button>
               </form>
@@ -43,24 +43,24 @@
           <div role="tabpanel"  aria-labelledby="signup-tab" class="tab-pane  fade" id="signup">
               <form class="d-grid gap-3 mb-3">
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> First Name </label>
-                      <input id="signupemailinput" placeholder="Enter First Name" type="email" required  class="form-control"/>
+                      <label for="ofirstname" class="form-label"> First Name </label>
+                      <input id="ofirstname" placeholder="Enter First Name" type="email" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> Last Name </label>
-                      <input id="signupemailinput" placeholder="Enter Last Name" type="email" required  class="form-control"/>
+                      <label for="olastname" class="form-label"> Last Name </label>
+                      <input id="olastname" placeholder="Enter Last Name" type="email" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupemailinput" class="form-label"> E-mail </label>
-                      <input id="signupemailinput" placeholder="name@example.com" type="email" required  class="form-control"/>
+                      <label for="oemail" class="form-label"> E-mail </label>
+                      <input id="oemail" placeholder="name@example.com" type="email" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signuppasswordinput" class="form-label"> Password </label>
-                      <input id="signuppasswordinput" placeholder="Enter Password" type="password" required  class="form-control"/>
+                      <label for="opassword" class="form-label"> Password </label>
+                      <input id="opassword" placeholder="Enter Password" type="password" required  class="form-control"/>
                   </div>
                   <div class="d-grid gap-1">
-                      <label for="signupconpasswordinput" class="form-label"> Confirm Password </label>
-                      <input id="signupconpasswordinput" placeholder="Enter Password" type="password" required   class="form-control" />
+                      <label for="oconpassword" class="form-label"> Confirm Password </label>
+                      <input id="oconpassword" placeholder="Enter Password" type="password" required   class="form-control" />
                   </div>
                   <button id="signup-officer-btn" type="button" class="button rounded shadow-sm"> Sign up </button>
 

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `users` (
     `firstname` VARCHAR(150)    NOT NULL,
     `lastname`  VARCHAR(150)    NOT NULL,
     `email`     VARCHAR(150)    NOT NULL,
-    `user-type` ENUM ('voter', 'officer', 'admin') DEFAULT 'voter',
+    `user_type` ENUM ('voter', 'officer', 'admin') DEFAULT 'voter',
     `password`  VARCHAR(150)    NOT NULL,
     `location`  ENUM ('england', 'scotland', 'wales', 'ireland', 'outside'),
     `Nationality` ENUM ('irish', 'british'),

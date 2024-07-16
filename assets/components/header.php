@@ -14,13 +14,24 @@
               <li><a href="#about-us"> About Us </a></li>
               <li><a href=""> Contact Us </a></li>
           </ul>
-          <div class="dropdown">
-            <button class="btn btn-secondary flex dropdown-btn" style="gap: 1rem;"> <span>  Sign up / Login  </span> <i class="fa fa-caret-down fa-beat-fade" aria-hidden="true"></i> </button>
-            <ul class="dropdown-content">
-              <li class="dropdown-item w-full"> <a class="w-full" href="./voter-auth.php"> I'm a Voter </a> </li>
-              <li class="dropdown-item w-full"> <a class="w-full" href="./officer-auth.php"> I'm an Election Officer </a></li>
-            </ul>
-          </div>
+          <?php
+              if (isset($_SESSION['loggedIn']))  {
+                echo ' <a href="./server/logout.php"> <button class="btn btn-secondary" type="button"> Log Out </button>
+
+                </a> ';
+              } else {
+                echo '
+                  <div class="dropdown">
+                  <button class="btn btn-secondary flex dropdown-btn" style="gap: 1rem;"> <span>  Sign up / Login  </span> <i class="fa fa-caret-down fa-beat-fade" aria-hidden="true"></i> </button>
+                    <ul class="dropdown-content">
+                    <li class="dropdown-item w-full"> <a class="w-full" href="./voter-auth.php"> I\'m a Voter </a> </li>
+                    <li class="dropdown-item w-full"> <a class="w-full" href="./officer-auth.php"> I\'m an Election Officer </a></li>
+                    </ul>
+                  </div>
+                ';
+              }
+          ?>
+
         </div>
       </nav>
     </header>

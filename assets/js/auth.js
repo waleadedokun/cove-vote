@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#login-btn").on('click', function() {
-    var email = $("#login-officer-email").val();
-    var password = $("#login-officer-password").val();
+    var email = $("#login-email").val();
+    var password = $("#login-password").val();
 
     if (email == "" || password == "") {
       alert('Please check your inputs');
@@ -26,7 +26,92 @@ $(document).ready(function() {
   }
 
   })
-  $("#signup-voter").on('click', function() {})
-  $("#signup-officer-btn").on('click', function() {})
+  $("#signup-voter-btn").on('click', function() {
+    var location = $("#vlocation").val();
+    var nationality = $("#vnationality").val();
+    var DOB =  $("#vdob").val();
+    var firstname = $("#vfirstname").val();
+    var lastname = $("#vlastname").val();
+    var email = $("#vemail").val();
+    var password = $("#vpassword").val();
+    var confirm_password = $("#vconpassword").val();
 
+    console.log(
+      location,
+      nationality,
+      DOB,
+      firstname,
+      lastname,
+      email,
+      password,
+      confirm_password
+    )
+    if (email == "" || password == "") {
+      alert ("You need to fill your email and password")
+    } else {
+      if (password != confirm_password) {
+        alert ("Password Do not match")
+      } else {
+        $.ajax({
+          url: './server/auth.php',
+          method: 'POST',
+          data: {
+              signup_voter: 1,
+              location: location,
+              nationality: nationality,
+              DOB: DOB,
+              firstname: firstname,
+              lastname: lastname,
+              email: email,
+              password: password,
+              confirm_password: confirm_password
+          },
+          success: function(response) {
+              if (response == 'success') {
+                  window.location.href = './voter-auth.php';
+              } else {
+                  alert(response)
+              }
+          },
+          dataType: 'text'
+      })
+      }
+    }
+
+  })
+  $("#signup-officer-btn").on('click', function() {
+    var firstname = $("#ofirstname").val();
+    var lastname = $("#olastname").val();
+    var email = $("#oemail").val();
+    var password = $("#opassword").val();
+    var confirm_password = $("#oconpassword").val();
+    if (email == "" || password == "") {
+      alert ("You need to fill your email and password")
+    } else {
+      if (password != confirm_password) {
+          alert ("Password Do not match")
+      } else {
+        $.ajax({
+            url: './server/auth.php',
+            method: 'POST',
+            data: {
+                signup_officer: 1,
+                firstname: firstname,
+                lastname: lastname,
+                email: email,
+                password: password,
+                confirm_password: confirm_password
+            },
+            success: function(response) {
+                if (response == 'success') {
+                    window.location.href = './officer-auth.php';
+                } else {
+                    alert(response)
+                }
+            },
+            dataType: 'text'
+        })
+      }
+    }
+  })
 })
