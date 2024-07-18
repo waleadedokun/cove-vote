@@ -6,8 +6,9 @@ A platform to register voters and election officer. Allow voter to cast a vote a
 - HTML
 - PHP
 - CSS3
-- JAVASCRIPT
+- JQuery
 - MYSQL
+- Bootstrap
 
 
 ## FIGMA FILES
@@ -19,4 +20,3 @@ A platform to register voters and election officer. Allow voter to cast a vote a
 - List Voters Page
 - Add Election
 - Profile Page
-
