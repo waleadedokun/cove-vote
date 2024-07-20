@@ -1,8 +1,8 @@
 <?php
-    session_start();
     require('./server/config.php');
-    if (isset($_SESSION['loggedIn'])) {
+    if (!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
+        exit();
     };
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
         <section class="grid mt-3 ">
             <div>
                 <div class="search-container">
-                        <input class="search-input" placeholder="Search for your recipes" />
+                        <input class="search-input" placeholder="Search for your upcoming elections" />
                         <i style="cursor: pointer;" onclick="window.location.href='./election-list.html'" class="fa fa-search fa-2xl" aria-hidden="true"></i>
                         <select  style="cursor: pointer;" name="location" id="location">
                             <option value="london">London </option>
@@ -37,43 +37,20 @@
             </div>
         </section>
 
-        <section class="election-wrapper">
-            <div class="election">
-              <div class="flex">
-                <img src="./assets/imgs/vote-icon.png" />
-                <span> <span> 11 </span> Voters</span>
-              </div>
-
-              <span> Polling Unit 1 </span>
-              <h3> Britian Election </h3>
-              <button class="btn btn-secondary"> View More </button>
-            </div>
-
-            <div class="election">
-              <div class="flex">
-                <img src="./assets/imgs/vote-icon.png" />
-                <span> <span> 11 </span> Voters</span>
-              </div>
-
-              <span> Polling Unit 1 </span>
-              <h3> Britian Election </h3>
-              <button class="btn btn-secondary"> View More </button>
-            </div>
-
-            <div class="election">
-              <div class="flex">
-                <img src="./assets/imgs/vote-icon.png" />
-                <span> <span> 11 </span> Voters</span>
-              </div>
-
-              <span> Polling Unit 1 </span>
-              <h3> Britian Election </h3>
-              <button class="btn btn-secondary"> View More </button>
-            </div>
+        <section>
+        <?php
+          if ($_SESSION['userType'] == 'officer' || $_SESSION['userType'] == 'admin' ) {
+            echo (' <a href="./add-election.php"><button> Add Election </button></a>');
+          }
+        ?>
         </section>
+        <div class="election-wrapper">
+
+        </div>
     </main>
     <?php
       include('./assets/components/footer.php')
     ?>
+    <script src="./assets/js/election.js"> </script>
     </body>
   </html>

@@ -1,4 +1,9 @@
-
+<?php
+    require('./server/config.php');
+    if (isset($_SESSION['loggedIn'])) {
+        header('Location: index.php');
+    };
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <title> Voters Authentication Page </title>
+    <title> Auth Page </title>
   </head>
   <body class="ff-inria">
     <?php
@@ -81,7 +86,6 @@
                       <input id="vconpassword" placeholder="Enter Password" type="password" required   class="form-control" />
                   </div>
                   <button id="signup-voter-btn" type="button" class="button rounded shadow-sm"> Sign up </button>
-
               </form>
           </div>
       </div>

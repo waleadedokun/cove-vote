@@ -14,7 +14,7 @@
     <?php
       include('./assets/components/header.php')
     ?>
-    <main>
+    <main class="flow">
       <section class="image-section">
         <div class="image-slider">
             <img src="./assets/imgs/projects.png" class="active" />
@@ -49,7 +49,7 @@
 
             <span> Polling Unit 1 </span>
             <h3> Britian Election </h3>
-            <a href="./election-detail.html"><button class="btn btn-secondary"> View More </button> </a>
+            <a href="./election-detail.php"><button class="btn btn-secondary"> View More </button> </a>
           </div>
 
           <div class="election">
@@ -60,7 +60,7 @@
 
             <span> Polling Unit 1 </span>
             <h3> Britian Election </h3>
-            <a href="./election-detail.html"><button class="btn btn-secondary"> View More </button> </a>
+            <a href="./election-detail.php"><button class="btn btn-secondary"> View More </button> </a>
           </div>
 
           <div class="election">
@@ -71,9 +71,14 @@
 
             <span> Polling Unit 1 </span>
             <h3> Britian Election </h3>
-            <a href="./election-detail.html"><button class="btn btn-secondary"> View More </button> </a>
+            <a href="./election-detail.php"><button class="btn btn-secondary"> View More </button> </a>
           </div>
         </div>
+
+      </section>
+      <section class="container">
+        <button> <a href="./voters-list.php">  Check Voters list </a> </button>
+        <button> <a href="./election-list.php">  Check Upcoming Election list </a> </button>
 
       </section>
     </main>
